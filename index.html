@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahgezha - Book Your Venue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<header class="navbar" id="navbar">
+    <a href="index.html" class="logo">Ahgezha</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" id="authLink" class="nav-cta">Login</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search venues...">
+        <div id="searchDropdown" class="search-results"></div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="hero-bg-img" id="heroBgImg"></div>
+        <div class="hero-grain"></div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-eyebrow">Egypt's Premier Venue Platform</div>
+        <h1 class="hero-title">
+            <span>YOUR</span>
+            <span class="accent">MOMENT</span>
+            <span class="outline">AWAITS</span>
+        </h1>
+        <p class="hero-sub">Luxury venues for weddings, celebrations, and milestones. Discover spaces that transform your vision into memory.</p>
+        <div class="hero-ctas">
+            <a href="#services" class="btn-hero-primary">Explore Venues</a>
+            <a href="dashboard.html" class="btn-hero-ghost">Book Now →</a>
+        </div>
+    </div>
+    <div class="hero-number">01</div>
+    <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+    <div class="marquee-track">
+        <div class="marquee-item">Wedding Halls</div>
+        <div class="marquee-item">Engagement Parties</div>
+        <div class="marquee-item">Birthdays</div>
+        <div class="marquee-item">Graduations</div>
+        <div class="marquee-item">Corporate Events</div>
+        <div class="marquee-item">Workshops</div>
+        <div class="marquee-item">Wedding Halls</div>
+        <div class="marquee-item">Engagement Parties</div>
+        <div class="marquee-item">Birthdays</div>
+        <div class="marquee-item">Graduations</div>
+        <div class="marquee-item">Corporate Events</div>
+        <div class="marquee-item">Workshops</div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+    <div class="section-header reveal">
+        <div>
+            <div class="section-tag">What We Offer</div>
+            <h2 class="section-title-big">OUR<br><span class="outline">VENUES</span></h2>
+        </div>
+        <p class="section-sub">Every space is handpicked for quality, elegance, and the moments that matter most.</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+            <img src="https://picsum.photos/400/600?random=11" alt="Wedding">
+            <div class="service-card-content">
+                <div class="service-number">01</div>
+                <div class="service-icon">💍</div>
+                <h3 class="service-name">Wedding Halls</h3>
+                <p class="service-desc">Luxury ballrooms for the day you've always imagined.</p>
+                <a href="wedding.html" class="service-link">Explore
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+            <img src="https://picsum.photos/400/600?random=22" alt="Engagement">
+            <div class="service-card-content">
+                <div class="service-number">02</div>
+                <div class="service-icon">💐</div>
+                <h3 class="service-name">Engagement Halls</h3>
+                <p class="service-desc">Intimate settings wrapped in romance for your new beginning.</p>
+                <a href="engagement.html" class="service-link">Explore
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+            <img src="https://picsum.photos/400/600?random=33" alt="Birthday">
+            <div class="service-card-content">
+                <div class="service-number">03</div>
+                <div class="service-icon">🎂</div>
+                <h3 class="service-name">Birthday Halls</h3>
+                <p class="service-desc">Vibrant spaces that make every celebration unforgettable.</p>
+                <a href="birthday.html" class="service-link">Explore
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+            <img src="https://picsum.photos/400/600?random=44" alt="Events">
+            <div class="service-card-content">
+                <div class="service-number">04</div>
+                <div class="service-icon">🎊</div>
+                <h3 class="service-name">Event Halls</h3>
+                <p class="service-desc">Versatile venues for any occasion, perfectly configured.</p>
+                <a href="events.html" class="service-link">Explore
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+            <img src="https://picsum.photos/400/600?random=55" alt="Graduation">
+            <div class="service-card-content">
+                <div class="service-number">05</div>
+                <div class="service-icon">🎓</div>
+                <h3 class="service-name">Graduation Halls</h3>
+                <p class="service-desc">Celebrate achievement in spaces worthy of your milestone.</p>
+                <a href="graduation.html" class="service-link">Explore
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+            <img src="https://picsum.photos/400/600?random=66" alt="Meeting">
+            <div class="service-card-content">
+                <div class="service-number">06</div>
+                <div class="service-icon">💼</div>
+                <h3 class="service-name">Meeting Rooms</h3>
+                <p class="service-desc">Professional spaces that elevate every business engagement.</p>
+                <a href="meeting.html" class="service-link">Explore
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement-section">
+    <div class="statement-bg-text">AHGEZHA</div>
+    <div class="statement-content">
+        <p class="statement-text reveal">We don't just find you a hall —<br>we find you the <em>perfect stage</em><br>for life's most precious moments.</p>
+        <div class="statement-cta reveal reveal-delay-1">
+            <div class="statement-line"></div>
+            <a href="about.html" class="statement-link">Our Story →</a>
+        </div>
+        <div class="stats-row reveal reveal-delay-2">
+            <div><div class="stat-num">500+</div><div class="stat-lbl">Events Hosted</div></div>
+            <div><div class="stat-num">48</div><div class="stat-lbl">Premium Venues</div></div>
+            <div><div class="stat-num">98%</div><div class="stat-lbl">Client Satisfaction</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+    <div class="section-header reveal">
+        <div>
+            <div class="section-tag">How It Works</div>
+            <h2 class="section-title-big">BOOK IN<br><span class="outline">4 STEPS</span></h2>
+        </div>
+    </div>
+    <div class="process-grid">
+        <div class="process-step reveal reveal-delay-1">
+            <div class="process-step-num">01</div>
+            <div class="process-step-icon">🔍</div>
+            <h3 class="process-step-title">Browse Venues</h3>
+            <p class="process-step-desc">Explore our curated collection of premium halls and spaces across Egypt.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+            <div class="process-step-num">02</div>
+            <div class="process-step-icon">✨</div>
+            <h3 class="process-step-title">Get Recommendations</h3>
+            <p class="process-step-desc">Our AI assistant matches you with the perfect package for your budget.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+            <div class="process-step-num">03</div>
+            <div class="process-step-icon">📅</div>
+            <h3 class="process-step-title">Confirm Your Date</h3>
+            <p class="process-step-desc">Lock in your venue and date with a simple, secure booking process.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-4">
+            <div class="process-step-num">04</div>
+            <div class="process-step-icon">🎉</div>
+            <h3 class="process-step-title">Celebrate</h3>
+            <p class="process-step-desc">Arrive and experience your event exactly as you imagined it.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured-section">
+    <div class="featured-inner">
+        <div class="featured-img-wrap reveal">
+            <img src="https://picsum.photos/600/750?random=99" alt="Royal Palace Hall" class="featured-img">
+            <div class="featured-img-badge">MOST<br>BOOKED<br>2026</div>
+        </div>
+        <div class="featured-content reveal reveal-delay-2">
+            <div class="featured-pre">Featured Venue</div>
+            <h2 class="featured-title">ROYAL<br><span>PALACE</span><br>HALL</h2>
+            <p class="featured-desc">The crown jewel of Egyptian celebration venues. Accommodating up to 500 guests with state-of-the-art facilities, stunning chandeliers, and a dedicated event coordination team.</p>
+            <div class="featured-tags">
+                <span class="featured-tag">500 Guests</span>
+                <span class="featured-tag">Full Catering</span>
+                <span class="featured-tag">Photography</span>
+                <span class="featured-tag">Decor Included</span>
+            </div>
+            <a href="wedding.html" class="btn-hero-primary">View Details</a>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+    <div class="section-header reveal">
+        <div>
+            <div class="section-tag">What They Say</div>
+            <h2 class="section-title-big">CLIENT<br><span class="outline">STORIES</span></h2>
+        </div>
+    </div>
+    <div class="testimonials-grid">
+        <div class="testimonial-card reveal reveal-delay-1">
+            <div class="stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Ahgezha made our wedding planning effortless. The Royal Palace Hall was beyond our dreams — every guest was speechless.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">NM</div>
+                <div><div class="author-name">Nour & Mohamed</div><div class="author-event">Wedding · Royal Palace Hall</div></div>
+            </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+            <div class="stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">From the chatbot recommendations to the final confirmation, everything was smooth and professional. Highly recommend.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">SK</div>
+                <div><div class="author-name">Sara K.</div><div class="author-event">Birthday · Skyline Terrace</div></div>
+            </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-3">
+            <div class="stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Our corporate event was handled with exceptional professionalism. The venue setup was perfect and the team was outstanding.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar">OH</div>
+                <div><div class="author-name">Omar H.</div><div class="author-event">Corporate · Garden Pavilion</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-bg-text">BOOK</div>
+    <div class="cta-content reveal">
+        <h2 class="cta-title">READY TO<br><span>CELEBRATE?</span></h2>
+        <p class="cta-sub">Your perfect venue is one click away. Join hundreds of happy clients who trusted Ahgezha.</p>
+        <a href="register.html" class="btn-cta">Get Started Today</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">Ahgezha</a>
+            <p>Egypt's premier venue booking platform. Connecting you with the most luxurious spaces for life's precious moments.</p>
+        </div>
+        <div class="footer-col"><h4>Venues</h4><ul>
+            <li><a href="wedding.html">Wedding Halls</a></li>
+            <li><a href="engagement.html">Engagement</a></li>
+            <li><a href="birthday.html">Birthday</a></li>
+            <li><a href="graduation.html">Graduation</a></li>
+            <li><a href="meeting.html">Meetings</a></li>
+            <li><a href="party.html">Party Halls</a></li>
+            <li><a href="workshop.html">Workshops</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Account</h4><ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul></div>
+    </div>
+    <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Ahgezha. All rights reserved.</span>
+        <div class="footer-socials">
+            <a href="#" class="footer-social">FB</a>
+            <a href="#" class="footer-social">IG</a>
+            <a href="#" class="footer-social">TW</a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Rooms - Ahgezha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<header class="navbar solid" id="navbar">
+    <a href="index.html" class="logo">Ahgezha</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" id="authLink" class="nav-cta">Login</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search venues...">
+        <div id="searchDropdown" class="search-results"></div>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://picsum.photos/1920/600?random=business');"></div>
+    <div class="page-hero-content">
+        <div class="page-hero-tag">Meetings</div>
+        <h1 class="page-hero-title">MEETING <span class="gold">ROOMS</span></h1>
+    </div>
+</section>
+
+<section class="venues-section">
+    <div style="margin-bottom:60px;" class="reveal">
+        <div class="section-tag">Meetings</div>
+        <h2 class="section-title-big" style="margin-bottom:16px;">BEST <span class="outline">MEETING</span></h2>
+        <p style="font-size:.9rem;color:var(--brown);max-width:600px;line-height:1.8;">Professional meeting spaces equipped with cutting-edge technology. From boardrooms to conference halls — make every business moment count.</p>
+    </div>
+    <div class="venues-grid">
+        <div class="venue-card reveal reveal-delay-1">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=61" alt="Executive Boardroom">
+                <div class="venue-card-badge">Executive</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Executive Boardroom</h3>
+                <div class="venue-card-price">2,000 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Premium boardroom with 4K display, video conferencing, and catering.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Executive Boardroom', 2000)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-2">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=62" alt="Skyline Conference">
+                <div class="venue-card-badge">Conference</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Skyline Conference</h3>
+                <div class="venue-card-price">3,500 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Large conference hall for seminars and corporate presentations.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Skyline Conference', 3500)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-3">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=63" alt="The Think Tank">
+                <div class="venue-card-badge">Creative</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">The Think Tank</h3>
+                <div class="venue-card-price">1,500 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Creative coworking space for brainstorming and team workshops.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('The Think Tank', 1500)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-1">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=64" alt="Corporate Suite A">
+                <div class="venue-card-badge">Private</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Corporate Suite A</h3>
+                <div class="venue-card-price">2,500 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Private suite for confidential meetings and executive discussions.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Corporate Suite A', 2500)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-2">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=65" alt="Innovation Hub">
+                <div class="venue-card-badge">Modern</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Innovation Hub</h3>
+                <div class="venue-card-price">2,800 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Modern open-plan space for hackathons and innovation sessions.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Innovation Hub', 2800)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-3">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=66" alt="Classic Boardroom">
+                <div class="venue-card-badge">Classic</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Classic Boardroom</h3>
+                <div class="venue-card-price">1,800 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Traditional boardroom setup for formal business meetings.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Classic Boardroom', 1800)">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-bg-text">BOOK</div>
+    <div class="cta-content reveal">
+        <h2 class="cta-title">FOUND YOUR<br><span>VENUE?</span></h2>
+        <p class="cta-sub">Don't wait — secure your date today. Popular venues book up fast.</p>
+        <a href="dashboard.html" class="btn-cta">Book Now</a>
+    </div>
+</section>
+
+<div id="paymentModal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <div class="modal-emoji">✨</div>
+            <h2 id="venueTitle">Confirm Booking</h2>
+            <p>Secure Payment Gateway</p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-amount-row">
+                <span>Total Amount:</span>
+                <span class="modal-amount-val" id="modalTotalAmount">0 EGP</span>
+            </div>
+            <form id="paymentForm" onsubmit="processFinalPayment(event)">
+                <div class="modal-field">
+                    <label>Cardholder Name</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="modal-field">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="xxxx xxxx xxxx xxxx" required>
+                </div>
+                <div class="modal-row">
+                    <div class="modal-field"><label>Expiry</label><input type="text" placeholder="MM/YY" required></div>
+                    <div class="modal-field"><label>CVV</label><input type="password" placeholder="CVV" required></div>
+                </div>
+                <button type="submit" class="btn-pay" id="payBtnSubmit">PAY & CONFIRM</button>
+            </form>
+            <button onclick="closePaymentModal()" class="btn-cancel-modal">Cancel and return</button>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">Ahgezha</a>
+            <p>Egypt's premier venue booking platform.</p>
+        </div>
+        <div class="footer-col"><h4>Venues</h4><ul>
+            <li><a href="wedding.html">Wedding Halls</a></li>
+            <li><a href="engagement.html">Engagement</a></li>
+            <li><a href="birthday.html">Birthday</a></li>
+            <li><a href="graduation.html">Graduation</a></li>
+            <li><a href="meeting.html">Meetings</a></li>
+            <li><a href="party.html">Party Halls</a></li>
+            <li><a href="workshop.html">Workshops</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Account</h4><ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul></div>
+    </div>
+    <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Ahgezha. All rights reserved.</span>
+        <div class="footer-socials">
+            <a href="#" class="footer-social">FB</a>
+            <a href="#" class="footer-social">IG</a>
+            <a href="#" class="footer-social">TW</a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahgezha - Dashboard</title>
+    <link rel="stylesheet" href="css/dash.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="sidebar-logo">
+        <a href="index.html"><h1>Ahgezha</h1></a>
+        <span>Venue Booking</span>
+    </div>
+    <div class="sidebar-role">
+        <div class="role-avatar" id="avatarInitials">AM</div>
+        <div class="role-info">
+            <p id="sidebarName">Ahmed M.</p>
+            <span id="sidebarRoleLbl">Client Account</span>
+        </div>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav"></nav>
+<div class="sidebar-bottom">
+        <div style="padding: 0 20px 15px;">
+            <button onclick="logout()" style="width: 100%; background: #c0392b; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s;">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                Logout
+            </button>
+        </div>
+
+        <div class="role-switcher">
+            <button class="role-btn active" onclick="switchRole('client')">Client</button>
+            <button class="role-btn" onclick="switchRole('admin')">Admin</button>
+        </div>
+    </div>
+</aside>
+<!-- MAIN -->
+<div class="main">
+    <header class="topbar">
+        <div class="topbar-title" id="topbarTitle"><b>My Dashboard</b></div>
+        <a href="index.html" class="topbar-home">← Home</a>
+        <div class="topbar-right">
+            <div class="notif-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8a8070" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+                <div class="notif-dot"></div>
+            </div>
+            <div style="font-size:.82rem;color:#8a8070;">Welcome, <strong id="topbarName" style="color:var(--navy)">Ahmed</strong></div>
+        </div>
+    </header>
+
+    <!-- OVERVIEW PAGE -->
+    <div class="page active" id="overview-page">
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-icon">📅</div><div class="stat-label">Total Bookings</div><div class="stat-value">4</div><div class="stat-sub stat-up">↑ 2 this month</div></div>
+            <div class="stat-card"><div class="stat-icon">⭐</div><div class="stat-label">Upcoming Events</div><div class="stat-value">2</div><div class="stat-sub">Next: 12 May 2026</div></div>
+            <div class="stat-card"><div class="stat-icon">💰</div><div class="stat-label">Total Spent</div><div class="stat-value">38K</div><div class="stat-sub" style="color:#8a8070;">EGP</div></div>
+            <div class="stat-card"><div class="stat-icon">🎁</div><div class="stat-label">Saved Packages</div><div class="stat-value">3</div><div class="stat-sub stat-up">↑ View wishlist</div></div>
+        </div>
+
+        <div class="section-title">My Recent Bookings</div>
+        <div class="card">
+            <div class="card-header"><h3>Booking History</h3><span class="view-all">View All →</span></div>
+            <table>
+                <thead><tr><th>Event</th><th>Venue</th><th>Date</th><th>Package</th><th>Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                    <tr><td>Wedding Party</td><td>Royal Palace Hall</td><td>12 May 2026</td><td>Premium</td><td>15,000 EGP</td><td><span class="badge badge-pending">Upcoming</span></td></tr>
+                    <tr><td>Business Meeting</td><td>Skyline Terrace</td><td>3 Apr 2026</td><td>Standard</td><td>3,500 EGP</td><td><span class="badge badge-success">Completed</span></td></tr>
+                    <tr><td>Birthday Party</td><td>Royal Palace Hall</td><td>20 Feb 2026</td><td>Gold</td><td>8,000 EGP</td><td><span class="badge badge-success">Completed</span></td></tr>
+                    <tr><td>Workshop</td><td>Skyline Terrace</td><td>5 Jan 2026</td><td>Basic</td><td>2,000 EGP</td><td><span class="badge badge-cancelled">Cancelled</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="two-col">
+            <div class="card">
+                <div class="card-header"><h3>Upcoming Events</h3></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:12px;">
+                    <div style="display:flex;align-items:center;gap:14px;padding:12px;background:#faf8f5;border-radius:10px;">
+                        <div style="width:46px;height:46px;background:var(--navy);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                            <span style="color:var(--gold);font-size:.62rem;font-weight:600;">MAY</span>
+                            <span style="color:white;font-weight:600;font-size:1rem;">12</span>
+                        </div>
+                        <div>
+                            <p style="font-weight:500;font-size:.87rem;color:var(--navy);">Wedding Party — Royal Palace Hall</p>
+                            <p style="font-size:.73rem;color:#8a8070;">Premium Package · 150 guests</p>
+                        </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:14px;padding:12px;background:#faf8f5;border-radius:10px;">
+                        <div style="width:46px;height:46px;background:var(--brown);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                            <span style="color:var(--cream);font-size:.62rem;font-weight:600;">JUN</span>
+                            <span style="color:white;font-weight:600;font-size:1rem;">8</span>
+                        </div>
+                        <div>
+                            <p style="font-weight:500;font-size:.87rem;color:var(--navy);">Graduation Party — Skyline Terrace</p>
+                            <p style="font-size:.73rem;color:#8a8070;">Gold Package · 80 guests</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><h3>Quick Actions</h3></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:10px;">
+                    <button onclick="showPage('book-page');setNav('book')" style="padding:12px;background:#f5f0eb;border:none;border-radius:10px;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--navy);">📝  Book a New Event</button>
+                    <button onclick="showPage('rec-page');setNav('rec')" style="padding:12px;background:#f5f0eb;border:none;border-radius:10px;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--navy);">✨  Get Package Recommendations</button>
+                    <button onclick="showPage('chat-page');setNav('chat')" style="padding:12px;background:#f5f0eb;border:none;border-radius:10px;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--navy);">💬  Chat with Ahgezha Bot</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RECOMMENDATIONS PAGE -->
+    <div class="page" id="rec-page">
+        <div class="budget-section">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+                <div><div class="stat-label">Your Budget</div><div class="budget-display"><span>EGP </span><span id="budgetDisplay">10,000</span></div></div>
+                <div style="text-align:right;"><div class="stat-label">Event Type</div><div style="font-size:.95rem;font-weight:500;color:var(--navy);" id="selectedEvent">Wedding Party</div></div>
+            </div>
+            <input type="range" id="budgetSlider" min="2000" max="50000" step="500" value="10000" oninput="updateBudget(this.value)">
+            <div class="slider-labels"><span>2,000 EGP</span><span>50,000 EGP</span></div>
+        </div>
+        <div class="event-filter">
+            <button class="filter-chip active" onclick="selectEvent(this,'Wedding Party')">💍 Wedding</button>
+            <button class="filter-chip" onclick="selectEvent(this,'Birthday Party')">🎂 Birthday</button>
+            <button class="filter-chip" onclick="selectEvent(this,'Business Meeting')">💼 Meeting</button>
+            <button class="filter-chip" onclick="selectEvent(this,'Graduation Party')">🎓 Graduation</button>
+            <button class="filter-chip" onclick="selectEvent(this,'Engagement Party')">💐 Engagement</button>
+            <button class="filter-chip" onclick="selectEvent(this,'Workshop')">📚 Workshop</button>
+        </div>
+        <div class="section-title">Recommended Packages for You</div>
+        <div class="rec-grid" id="recGrid"></div>
+        <div class="package-detail">
+            <div class="section-title">What's Included in This Package</div>
+            <div class="package-items" id="packageItems"></div>
+        </div>
+    </div>
+
+    <!-- CHATBOT PAGE -->
+    <div class="page" id="chat-page">
+        <div class="chat-layout">
+            <div class="chat-sidebar">
+                <div class="chat-sidebar-head"><h4>Conversations</h4></div>
+                <div class="chat-history">
+                    <div class="chat-hist-item active"><p>Wedding Package Inquiry</p><span>Today, 2:30 PM</span></div>
+                    <div class="chat-hist-item"><p>Birthday Venue Options</p><span>Yesterday</span></div>
+                    <div class="chat-hist-item"><p>Budget Planning Help</p><span>Apr 18</span></div>
+                </div>
+                <button class="new-chat-btn" onclick="resetChat()">+ New Conversation</button>
+            </div>
+            <div class="chat-main">
+                <div class="chat-topbar">
+                    <div class="bot-avatar"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7H3a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73A2 2 0 0112 2zM7.5 14a1 1 0 100 2 1 1 0 000-2zm9 0a1 1 0 100 2 1 1 0 000-2zM5 19a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1z"/></svg></div>
+                    <div class="chat-bot-info"><p>Ahgezha Assistant</p><span><span class="online-dot"></span>Online · replies instantly</span></div>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="msg bot">
+                        <div class="msg-avatar bot-msg-avatar"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:var(--gold)"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7H3a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73A2 2 0 0112 2zM7.5 14a1 1 0 100 2 1 1 0 000-2zm9 0a1 1 0 100 2 1 1 0 000-2zM5 19a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1z"/></svg></div>
+                        <div>
+                            <div class="msg-bubble">Welcome to Ahgezha! 👋<br><br>I'm your personal event planning assistant. I can help you find the perfect venue, recommend packages within your budget, and answer any questions.<br><br>What kind of event are you planning?</div>
+                            <div class="quick-replies">
+                                <button class="quick-reply" onclick="sendQuick('I want to book a wedding hall')">💍 Wedding</button>
+                                <button class="quick-reply" onclick="sendQuick('I need a birthday venue')">🎂 Birthday</button>
+                                <button class="quick-reply" onclick="sendQuick('Looking for a meeting room')">💼 Meeting</button>
+                                <button class="quick-reply" onclick="sendQuick('What packages do you have?')">📋 All Packages</button>
+                            </div>
+                            <div class="msg-time">Just now</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <textarea class="chat-input" id="chatInput" placeholder="Type your message..." rows="1"
+                        onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendMessage()}"
+                        oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"></textarea>
+                    <button class="send-btn" onclick="sendMessage()">
+                        <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING FORM PAGE -->
+    <div class="page" id="book-page">
+        <div style="max-width:800px;">
+            <div class="card" style="padding:28px;">
+                <h2 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:24px;">Book a New Event</h2>
+                <div class="form-grid">
+                    <div class="form-group"><label>Event Type</label><select><option>Wedding Party</option><option>Birthday Party</option><option>Business Meeting</option><option>Graduation Party</option><option>Engagement Party</option><option>Workshop</option><option>General Event</option></select></div>
+                    <div class="form-group"><label>Venue</label><select><option>Royal Palace Hall</option><option>Skyline Terrace</option><option>Garden Pavilion</option><option>Crystal Ballroom</option></select></div>
+                    <div class="form-group"><label>Event Date</label><input type="date"></div>
+                    <div class="form-group"><label>Number of Guests</label><input type="number" placeholder="e.g. 100"></div>
+                    <div class="form-group"><label>Package</label><select><option>Basic</option><option>Standard</option><option>Gold</option><option>Premium</option></select></div>
+                    <div class="form-group"><label>Budget (EGP)</label><input type="number" placeholder="e.g. 15000"></div>
+                </div>
+                <div class="form-group"><label>Special Requests</label><textarea placeholder="Any specific requirements, themes, or preferences..."></textarea></div>
+                <div style="display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap;">
+                    <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:200px;padding:12px 16px;background:#f5f0eb;border-radius:10px;">
+                        <input type="checkbox" id="addPhotog" style="width:auto;accent-color:var(--navy);">
+                        <label for="addPhotog" style="font-size:.84rem;color:var(--navy);cursor:pointer;">Add Photographer (+2,000 EGP)</label>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:200px;padding:12px 16px;background:#f5f0eb;border-radius:10px;">
+                        <input type="checkbox" id="addDecor" style="width:auto;accent-color:var(--navy);">
+                        <label for="addDecor" style="font-size:.84rem;color:var(--navy);cursor:pointer;">Add Decoration (+3,000 EGP)</label>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:200px;padding:12px 16px;background:#f5f0eb;border-radius:10px;">
+                        <input type="checkbox" id="addOutfit" style="width:auto;accent-color:var(--navy);">
+                        <label for="addOutfit" style="font-size:.84rem;color:var(--navy);cursor:pointer;">Outfit Recommendations</label>
+                    </div>
+                </div>
+                <div style="display:flex;gap:12px;align-items:center;">
+                    <button class="submit-btn" onclick="submitBooking()">CONFIRM BOOKING</button>
+                    <span style="font-size:.78rem;color:#8a8070;">You'll receive a confirmation via email</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN PAGE -->
+    <div class="page" id="admin-page">
+        <div class="admin-grid">
+            <div class="admin-stat">
+                <div class="lbl">Total Bookings</div><div class="num">284</div>
+                <div class="trend trend-up">↑ 12% this month</div>
+                <div style="display:flex;justify-content:space-between;font-size:.7rem;color:#8a8070;margin-top:10px;"><span>Monthly Target</span><span>71%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:71%"></div></div>
+            </div>
+            <div class="admin-stat">
+                <div class="lbl">Revenue (EGP)</div><div class="num">1.2M</div>
+                <div class="trend trend-up">↑ 8% vs last month</div>
+                <div style="display:flex;justify-content:space-between;font-size:.7rem;color:#8a8070;margin-top:10px;"><span>Annual Target</span><span>62%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:62%"></div></div>
+            </div>
+            <div class="admin-stat">
+                <div class="lbl">Active Clients</div><div class="num">148</div>
+                <div class="trend trend-up">↑ 23 new this week</div>
+                <div style="display:flex;justify-content:space-between;font-size:.7rem;color:#8a8070;margin-top:10px;"><span>Retention Rate</span><span>88%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>
+            </div>
+        </div>
+
+        <div class="section-title">Bookings Management</div>
+        <div class="card">
+            <div class="card-header">
+                <h3>All Bookings</h3>
+                <div style="display:flex;gap:8px;">
+                    <select style="padding:6px 10px;border:1px solid #ede8e1;border-radius:8px;font-size:.76rem;outline:none;font-family:'DM Sans',sans-serif;"><option>All Events</option><option>Wedding</option><option>Birthday</option><option>Meeting</option></select>
+                    <select style="padding:6px 10px;border:1px solid #ede8e1;border-radius:8px;font-size:.76rem;outline:none;font-family:'DM Sans',sans-serif;"><option>All Status</option><option>Confirmed</option><option>Pending</option><option>Cancelled</option></select>
+                </div>
+            </div>
+            <table>
+                <thead><tr><th>Client</th><th>Event</th><th>Venue</th><th>Date</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+                <tbody>
+                    <tr><td>Ahmed M.</td><td>Wedding Party</td><td>Royal Palace Hall</td><td>12 May 2026</td><td>15,000 EGP</td><td><span class="badge badge-pending">Pending</span></td><td><button class="action-btn-confirm" onclick="alert('Booking confirmed!')">Confirm</button></td></tr>
+                    <tr><td>Sara K.</td><td>Birthday Party</td><td>Skyline Terrace</td><td>20 Apr 2026</td><td>8,000 EGP</td><td><span class="badge badge-success">Confirmed</span></td><td><button class="action-btn-cancel" onclick="alert('Booking cancelled.')">Cancel</button></td></tr>
+                    <tr><td>Omar H.</td><td>Workshop</td><td>Skyline Terrace</td><td>5 May 2026</td><td>3,500 EGP</td><td><span class="badge badge-pending">Pending</span></td><td><button class="action-btn-confirm" onclick="alert('Booking confirmed!')">Confirm</button></td></tr>
+                    <tr><td>Nour A.</td><td>Graduation</td><td>Royal Palace Hall</td><td>8 Jun 2026</td><td>6,000 EGP</td><td><span class="badge badge-success">Confirmed</span></td><td><button class="action-btn-cancel" onclick="alert('Booking cancelled.')">Cancel</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="two-col" style="margin-top:20px;">
+            <div class="card">
+                <div class="card-header"><h3>Popular Event Types</h3></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:12px;">
+                    <div><div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:4px;"><span>Wedding Party</span><span style="color:var(--gold);font-weight:500;">38%</span></div><div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div></div>
+                    <div><div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:4px;"><span>Birthday Party</span><span style="color:var(--gold);font-weight:500;">24%</span></div><div class="progress-bar"><div class="progress-fill" style="width:24%"></div></div></div>
+                    <div><div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:4px;"><span>Business Meeting</span><span style="color:var(--gold);font-weight:500;">18%</span></div><div class="progress-bar"><div class="progress-fill" style="width:18%"></div></div></div>
+                    <div><div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:4px;"><span>Graduation</span><span style="color:var(--gold);font-weight:500;">12%</span></div><div class="progress-bar"><div class="progress-fill" style="width:12%"></div></div></div>
+                    <div><div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:4px;"><span>Others</span><span style="color:var(--gold);font-weight:500;">8%</span></div><div class="progress-bar"><div class="progress-fill" style="width:8%"></div></div></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><h3>Venue Occupancy</h3></div>
+                <div style="padding:16px;display:flex;flex-direction:column;gap:12px;">
+                    <div style="padding:14px;background:#faf8f5;border-radius:10px;">
+                        <p style="font-weight:500;font-size:.87rem;color:var(--navy);">Royal Palace Hall</p>
+                        <div style="display:flex;justify-content:space-between;font-size:.73rem;color:#8a8070;margin-top:4px;"><span>May 2026</span><span style="color:#4caf7d;">8 bookings</span></div>
+                        <div class="progress-bar" style="margin-top:8px;"><div class="progress-fill" style="width:80%"></div></div>
+                    </div>
+                    <div style="padding:14px;background:#faf8f5;border-radius:10px;">
+                        <p style="font-weight:500;font-size:.87rem;color:var(--navy);">Skyline Terrace</p>
+                        <div style="display:flex;justify-content:space-between;font-size:.73rem;color:#8a8070;margin-top:4px;"><span>May 2026</span><span style="color:#e09c3c;">5 bookings</span></div>
+                        <div class="progress-bar" style="margin-top:8px;"><div class="progress-fill" style="width:50%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- end .main -->
+
+<script src="js/dashboard.js"></script>
+</body>
+</body>
+</html>

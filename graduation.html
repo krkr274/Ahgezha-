@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Halls - Ahgezha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<header class="navbar solid" id="navbar">
+    <a href="index.html" class="logo">Ahgezha</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" id="authLink" class="nav-cta">Login</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search venues...">
+        <div id="searchDropdown" class="search-results"></div>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://picsum.photos/1920/600?random=celebration');"></div>
+    <div class="page-hero-content">
+        <div class="page-hero-tag">Graduations</div>
+        <h1 class="page-hero-title">GRADUATION <span class="gold">HALLS</span></h1>
+    </div>
+</section>
+
+<section class="venues-section">
+    <div style="margin-bottom:60px;" class="reveal">
+        <div class="section-tag">Graduations</div>
+        <h2 class="section-title-big" style="margin-bottom:16px;">BEST <span class="outline">GRADUATION</span></h2>
+        <p style="font-size:.9rem;color:var(--brown);max-width:600px;line-height:1.8;">Celebrate your academic achievement in a venue worthy of your hard work. From intimate family gatherings to full graduation ceremonies.</p>
+    </div>
+    <div class="venues-grid">
+        <div class="venue-card reveal reveal-delay-1">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=51" alt="Academic Grand Hall">
+                <div class="venue-card-badge">Formal</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Academic Grand Hall</h3>
+                <div class="venue-card-price">6,000 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Formal ceremony venue with stage, podium, and seating for 300 guests.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Academic Grand Hall', 6000)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-2">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=52" alt="Skyline Terrace">
+                <div class="venue-card-badge">Celebration</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Skyline Terrace</h3>
+                <div class="venue-card-price">5,000 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Chic celebration venue — perfect post-ceremony party with city views.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Skyline Terrace', 5000)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-3">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=53" alt="Garden Pavilion">
+                <div class="venue-card-badge">Garden</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Garden Pavilion</h3>
+                <div class="venue-card-price">4,000 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Relaxed outdoor setting for family graduation gatherings.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Garden Pavilion', 4000)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-1">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=54" alt="The Grand Atrium">
+                <div class="venue-card-badge">Prestige</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">The Grand Atrium</h3>
+                <div class="venue-card-price">8,000 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Prestigious hall for large graduation ceremonies and formal dinners.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('The Grand Atrium', 8000)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-2">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=55" alt="Crystal Ballroom">
+                <div class="venue-card-badge">Elegant</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Crystal Ballroom</h3>
+                <div class="venue-card-price">7,000 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Elegant setting for combined graduation ceremony and reception.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Crystal Ballroom', 7000)">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="venue-card reveal reveal-delay-3">
+            <div class="venue-card-img">
+                <img src="https://picsum.photos/400/300?random=56" alt="Campus Venue">
+                <div class="venue-card-badge">Value</div>
+            </div>
+            <div class="venue-card-body">
+                <h3 class="venue-card-name">Campus Venue</h3>
+                <div class="venue-card-price">3,500 <span>EGP / event</span></div>
+                <p class="venue-card-desc">Affordable and accessible venue perfect for class reunions.</p>
+                <div class="venue-card-footer">
+                    <a href="#" class="btn-view">View Details</a>
+                    <button class="btn-book" onclick="openPaymentGateway('Campus Venue', 3500)">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-bg-text">BOOK</div>
+    <div class="cta-content reveal">
+        <h2 class="cta-title">FOUND YOUR<br><span>VENUE?</span></h2>
+        <p class="cta-sub">Don't wait — secure your date today. Popular venues book up fast.</p>
+        <a href="dashboard.html" class="btn-cta">Book Now</a>
+    </div>
+</section>
+
+<div id="paymentModal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <div class="modal-emoji">✨</div>
+            <h2 id="venueTitle">Confirm Booking</h2>
+            <p>Secure Payment Gateway</p>
+        </div>
+        <div class="modal-body">
+            <div class="modal-amount-row">
+                <span>Total Amount:</span>
+                <span class="modal-amount-val" id="modalTotalAmount">0 EGP</span>
+            </div>
+            <form id="paymentForm" onsubmit="processFinalPayment(event)">
+                <div class="modal-field">
+                    <label>Cardholder Name</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="modal-field">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="xxxx xxxx xxxx xxxx" required>
+                </div>
+                <div class="modal-row">
+                    <div class="modal-field"><label>Expiry</label><input type="text" placeholder="MM/YY" required></div>
+                    <div class="modal-field"><label>CVV</label><input type="password" placeholder="CVV" required></div>
+                </div>
+                <button type="submit" class="btn-pay" id="payBtnSubmit">PAY & CONFIRM</button>
+            </form>
+            <button onclick="closePaymentModal()" class="btn-cancel-modal">Cancel and return</button>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">Ahgezha</a>
+            <p>Egypt's premier venue booking platform.</p>
+        </div>
+        <div class="footer-col"><h4>Venues</h4><ul>
+            <li><a href="wedding.html">Wedding Halls</a></li>
+            <li><a href="engagement.html">Engagement</a></li>
+            <li><a href="birthday.html">Birthday</a></li>
+            <li><a href="graduation.html">Graduation</a></li>
+            <li><a href="meeting.html">Meetings</a></li>
+            <li><a href="party.html">Party Halls</a></li>
+            <li><a href="workshop.html">Workshops</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Account</h4><ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul></div>
+    </div>
+    <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Ahgezha. All rights reserved.</span>
+        <div class="footer-socials">
+            <a href="#" class="footer-social">FB</a>
+            <a href="#" class="footer-social">IG</a>
+            <a href="#" class="footer-social">TW</a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

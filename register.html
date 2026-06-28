@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Ahgezha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<header class="navbar solid" id="navbar">
+    <a href="index.html" class="logo">Ahgezha</a>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" id="authLink" class="nav-cta">Login</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search venues...">
+        <div id="searchDropdown" class="search-results"></div>
+    </div>
+</header>
+
+<div class="form-page">
+    <div class="form-page-inner">
+        <div class="form-card">
+            <a href="index.html" class="form-card-logo">Ahgezha</a>
+            <h1 class="form-card-title">CREATE ACCOUNT</h1>
+            <p class="form-card-sub">Join Ahgezha and start booking your perfect venue today.</p>
+            <form id="regForm">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="regUser" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="regEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="regPass" placeholder="Min. 6 characters" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPass" placeholder="Repeat password" required>
+                </div>
+                <button type="submit" class="btn-form">CREATE ACCOUNT</button>
+            </form>
+            <p class="form-footer-text">Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>
